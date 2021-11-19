@@ -7,9 +7,9 @@ const removeContact = async (id) => {
   if (idx === -1) {
     return null;
   }
-  contacts.splice(idx, 1);
+  const contact = contacts.splice(idx, 1);
   await updateContacts(contacts);
-  return true;
+  return contact;
 };
 
 module.exports = removeContact;
